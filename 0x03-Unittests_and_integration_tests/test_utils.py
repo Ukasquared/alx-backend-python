@@ -32,7 +32,7 @@ class TestAccessNestedMap(unittest.TestCase):
 class TestGetJson(unittest.TestCase):
     """testing http request """
 
-    @patch('request.get')
+    @patch('requests.get')
     def test_get_json(self, mock_it):
         """ test an http request """
         test_cases = [
