@@ -42,13 +42,13 @@ class TestGetJson(unittest.TestCase):
 
         for test_url, test_payload in test_cases:
             # Configure the mock to return the test_payload
-            mock_get.return_value.json.return_value = test_payload
+            mock_it.return_value.json.return_value = test_payload
 
             # Call the function
             result = get_json(test_url)
 
             # Assert the mocked get method was called exactly once with the test_url
-            mock_get.assert_called_once_with(test_url)
+            mock_it.assert_called_once_with(test_url)
 
             # Assert that the output is equal to test_payload
             self.assertEqual(result, test_payload)
